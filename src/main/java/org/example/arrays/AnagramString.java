@@ -1,6 +1,9 @@
 package org.example.arrays;
+/*
+    Given two strings s and t, return true if t is an anagram of s, and false otherwise.
 
-import java.util.Arrays;
+    An anagram is a word or phrase formed by rearranging the letters of another, such as "listen" and "silent".
+*/
 
 public class AnagramString {
     public static void main(String[] args) {

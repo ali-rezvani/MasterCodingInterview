@@ -5,6 +5,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 
+/*
+
+Given a string s containing just the characters '(', ')', '{', '}', '[', and ']',
+ determine if the input string is valid.
+
+The string is valid if:
+
+Open brackets must be closed by the same type of brackets.
+
+Open brackets must be closed in the correct order.
+
+Every closing bracket has a corresponding opening bracket of the same type.
+
+*/
+
 public class ValidParentheses {
     public static void main(String[] args) {
         String s = "(()[]{})[][]";
