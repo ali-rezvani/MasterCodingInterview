@@ -45,4 +45,36 @@ public class MaxSumSubarray {
 
         return maxSum;
     }
+
+    /*A little tougher version:
+    Maximum Sum Subarray with indices
+
+     Not only find the maximum sum, but also return the
+     starting and ending indices of that subarray.*/
+
+    private static int[] kadaneWithIndices(int[] nums) {
+        int currentSum = nums[0];
+        int maxSum = nums[0];
+        int start = 0;
+        int bestStart = 0;
+        int bestEnd = 0;
+
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] > currentSum + nums[i]) {
+                currentSum = nums[i];
+                start = i;
+            } else {
+                currentSum += nums[i];
+            }
+
+            if (currentSum > maxSum) {
+                maxSum = currentSum;
+                bestStart = start;
+                bestEnd = i;
+            }
+        }
+
+        return new int[]{maxSum, bestStart, bestEnd};
+    }
+
 }
